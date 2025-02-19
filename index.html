@@ -1,45 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>News Hub</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>News and Bookmarks</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <nav>
-            <div class="logo">
-                <i class="fas fa-newspaper"></i>
-                <h1>News Hub</h1>
-            </div>
-            <button id="bookmark-btn"><i class="fas fa-bookmark"></i></button>
-        </nav>
-    </header>
-
-    <div class="categories">
-        <button class="active" data-category="all">All</button>
-        <button data-category="technology">Technology</button>
-        <button data-category="business">Business</button>
-        <button data-category="sports">Sports</button>
-        <button data-category="science">Science</button>
+  <div class="container">
+    <div class="navbar">
+      <button class="tab-btn active" onclick="changeTab('news')">News</button>
+      <button class="tab-btn" onclick="changeTab('bookmarks')">Bookmarks</button>
     </div>
-
-    <main id="news-container"></main>
-
-    <div id="bookmarks-panel">
-        <div class="bookmarks-header">
-            <h2>Bookmarks</h2>
-            <button id="close-bookmarks"><i class="fas fa-times"></i></button>
-        </div>
-        <div id="bookmarked-articles"></div>
-    </div>
-
-    <footer>
-        <p>&copy; 2025 News Hub. All rights reserved.</p>
-    </footer>
-
-    <script src="script.js"></script>
+    <div id="content-container" class="content-container"></div>
+    <div id="loader" class="loader"></div>
+  </div>
+  <script src="script.js"></script>
 </body>
 </html>
